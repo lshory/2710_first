@@ -2,7 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('build') {
+            steps {
+                sh 'ls -ltr'
+            }
+        }
+     stage('Deploy') {
             steps {
                 sh 'python3 main.py'
             }
